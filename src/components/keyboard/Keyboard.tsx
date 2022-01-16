@@ -79,7 +79,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses }: Props) => {
         <Key value="N" onClick={onClick} status={charStatuses["N"]} />
         <Key value="M" onClick={onClick} status={charStatuses["M"]} />
         <Key width={65.4} value="DELETE" onClick={onClick}>
-          Ferwiderje
+          Fuothelje
         </Key>
       </div>
     </div>

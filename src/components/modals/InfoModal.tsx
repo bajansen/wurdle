@@ -55,9 +55,9 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Besykje it WURDLE in 6 kear te riede.
-                      Nei eltse gok feroaren de kleuren fan 'e tegels
-                      om sjen te litten hoe tichtby dyn gok by it WURDLE wie.
+                      Besykje it WURDLE yn 6 kear te rieden.
+                      Nei eltse gok feroarjen de kleuren fan 'e tegels.
+                      Dit lit sjen hoe ticht dyn gok by it WURDLE siet.
                     </p>
 
                     <div className="flex justify-center mb-1 mt-4">
@@ -68,7 +68,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                       <Cell value="H" />
                     </div>
                     <p className="text-sm text-gray-500">
-                      De letter S sit in it wurd en stiet goed.
+                      De letter S sit yn it wurd en stiet goed.
                     </p>
                     <div className="flex justify-center mb-1 mt-4">
                       <Cell value="E" />
@@ -78,7 +78,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                       <Cell value="E" />
                     </div>
                     <p className="text-sm text-gray-500">
-                      De letter L sit in it wurd mar stiet net goed.
+                      De letter L sit yn it wurd mar stiet net goed.
                     </p>
 
                     <div className="flex justify-center mb-1 mt-4">
@@ -89,7 +89,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                       <Cell value="J" />
                     </div>
                     <p className="text-sm text-gray-500">
-                      De letter I sit net in it wurd.
+                      De letter I sit net yn it wurd.
                     </p>
                   </div>
                 </div>

@@ -70,7 +70,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
                       >
                         hjir fine
                       </a>{" "}
-                      en it Engelske orizjineel kinst {" "}
+                      en it Ingelske orizjineel kinst {" "}
                       <a
                         href="https://www.powerlanguage.co.uk/wordle/"
                         className="underline font-bold"
