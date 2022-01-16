@@ -1,9 +1,9 @@
-import { WORDS } from "../constants/wordlist";
+import { WURDEN } from "../constants/wurdlist";
 import { VALIDGUESSES } from "../constants/validGuesses";
 
 export const isWordInWordList = (word: string) => {
   return (
-    WORDS.includes(word.toLowerCase()) ||
+    WURDEN.includes(word.toLowerCase()) ||
     VALIDGUESSES.includes(word.toLowerCase())
   );
 };
@@ -18,9 +18,10 @@ export const getWordOfDay = () => {
   const now = Date.now();
   const msInDay = 86400000;
   const index = Math.floor((now - epochMs) / msInDay);
+  //const index = 249;
 
   return {
-    solution: WORDS[index].toUpperCase(),
+    solution: WURDEN[index].toUpperCase(),
     solutionIndex: index,
   };
 };

@@ -51,46 +51,45 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                     as="h3"
                     className="text-lg leading-6 font-medium text-gray-900"
                   >
-                    How to play
+                    Hoe WURDLE te spyljen
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Guess the WORDLE in 6 tries. After each guess, the color
-                      of the tiles will change to show how close your guess was
-                      to the word.
+                      Besykje it WURDLE in 6 kear te riede.
+                      Nei eltse gok feroaren de kleuren fan 'e tegels
+                      om sjen te litten hoe tichtby dyn gok by it WURDLE wie.
                     </p>
 
                     <div className="flex justify-center mb-1 mt-4">
-                      <Cell value="W" status="correct" />
-                      <Cell value="E" />
-                      <Cell value="A" />
-                      <Cell value="R" />
-                      <Cell value="Y" />
-                    </div>
-                    <p className="text-sm text-gray-500">
-                      The letter W is in the word and in the correct spot.
-                    </p>
-
-                    <div className="flex justify-center mb-1 mt-4">
-                      <Cell value="P" />
-                      <Cell value="I" />
-                      <Cell value="L" status="present" />
+                      <Cell value="S" status="correct" />
+                      <Cell value="J" />
                       <Cell value="O" />
-                      <Cell value="T" />
+                      <Cell value="C" />
+                      <Cell value="H" />
                     </div>
                     <p className="text-sm text-gray-500">
-                      The letter L is in the word but in the wrong spot.
+                      De letter S sit in it wurd en stiet goed.
                     </p>
-
                     <div className="flex justify-center mb-1 mt-4">
-                      <Cell value="V" />
-                      <Cell value="A" />
-                      <Cell value="G" />
-                      <Cell value="U" status="absent" />
+                      <Cell value="E" />
+                      <Cell value="L" status="present"/>
+                      <Cell value="T" />
+                      <Cell value="S" />
                       <Cell value="E" />
                     </div>
                     <p className="text-sm text-gray-500">
-                      The letter U is not in the word in any spot.
+                      De letter L sit in it wurd mar stiet net goed.
+                    </p>
+
+                    <div className="flex justify-center mb-1 mt-4">
+                      <Cell value="O" />
+                      <Cell value="P" />
+                      <Cell value="N" />
+                      <Cell value="I" status="absent" />
+                      <Cell value="J" />
+                    </div>
+                    <p className="text-sm text-gray-500">
+                      De letter I sit net in it wurd.
                     </p>
                   </div>
                 </div>

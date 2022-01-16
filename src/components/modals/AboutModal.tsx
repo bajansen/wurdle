@@ -50,23 +50,32 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
                     as="h3"
                     className="text-lg leading-6 font-medium text-gray-900"
                   >
-                    About
+                    Oer Wurdle
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      This is an open source clone of the game Wordle -{" "}
+                      Dit is een Fryske verzje fan Wordle.
+                      Oersette en fersoarge troch {" "}
+                      <a
+                        href="https://www.twitter.com/BAJansen"
+                        className="underline font-bold"
+                      >
+                        Bernardus Jansen
+                      </a>{" "}
+                      <br/>
+                      De koade dy't brûkt is kinst {" "}
                       <a
                         href="https://github.com/hannahcode/wordle"
                         className="underline font-bold"
                       >
-                        check out the code here
+                        hjir fine
                       </a>{" "}
-                      and{" "}
+                      en it Engelske orizjineel kinst {" "}
                       <a
                         href="https://www.powerlanguage.co.uk/wordle/"
                         className="underline font-bold"
                       >
-                        play the original here
+                        hjir spylje
                       </a>
                     </p>
                   </div>
