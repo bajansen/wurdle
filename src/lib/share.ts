@@ -8,7 +8,8 @@ export const shareStatus = (guesses: string[]) => {
       " " +
       guesses.length +
       "/6\n\n" +
-      generateEmojiGrid(guesses)
+      generateEmojiGrid(guesses) +
+      "\nhttps://wurdle.benno.frl"
   );
 };
 

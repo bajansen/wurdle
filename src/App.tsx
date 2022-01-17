@@ -77,7 +77,7 @@ function App() {
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <Alert message="Wurd net fûn" isOpen={isWordNotFoundAlertOpen} />
       <Alert
-        message={`Hast ferlern, ${solution} was it wurd.`}
+        message={`Hast ferlern, it wurd was ${solution}.`}
         isOpen={isGameLost}
       />
       <Alert
@@ -86,7 +86,7 @@ function App() {
         variant="success"
       />
       <div className="flex w-80 mx-auto items-center mb-8">
-        <h1 className="text-xl grow font-bold">Wurdle</h1>
+        <h1 className="text-xl grow font-bold">Wurdle - Yn it Frysk!</h1>
         <InformationCircleIcon
           className="h-6 w-6 cursor-pointer"
           onClick={() => setIsInfoModalOpen(true)}
