@@ -1,35 +1,35 @@
-import { getGuessStatuses } from "./statuses";
-import { solutionIndex } from "./words";
+import { getGuessStatuses } from './statuses'
+import { solutionIndex } from './words'
 
 export const shareStatus = (guesses: string[]) => {
   navigator.clipboard.writeText(
     "Wurdle " +
       solutionIndex +
-      " " +
+      ' ' +
       guesses.length +
-      "/6\n\n" +
+      '/6\n\n' +
       generateEmojiGrid(guesses) +
-      "\nhttps://wurdle.benno.frl"
-  );
-};
+      '\nhttps://wurdle.benno.frl'
+  )
+}
 
 export const generateEmojiGrid = (guesses: string[]) => {
   return guesses
     .map((guess) => {
-      const status = getGuessStatuses(guess);
+      const status = getGuessStatuses(guess)
       return guess
-        .split("")
+        .split('')
         .map((letter, i) => {
           switch (status[i]) {
-            case "correct":
-              return "🟩";
-            case "present":
-              return "🟨";
+            case 'correct':
+              return '🟩'
+            case 'present':
+              return '🟨'
             default:
-              return "⬜";
+              return '⬜'
           }
         })
-        .join("");
+        .join('')
     })
-    .join("\n");
-};
+    .join('\n')
+}
