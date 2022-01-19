@@ -83,11 +83,11 @@ function App() {
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <Alert message="Wurd net fûn" isOpen={isWordNotFoundAlertOpen} />
       <Alert
-        message={`Hast ferlern, it wurd was ${solution}.`}
+        message={`Spitich, it wurd was ${solution}.`}
         isOpen={isGameLost}
       />
       <Alert
-        message="Útslag kopiearre nei klemboerd"
+        message="Útslach kopiearre"
         isOpen={shareComplete}
         variant="success"
       />
