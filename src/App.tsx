@@ -150,14 +150,14 @@ function App() {
         Oer dit spultsje
       </button>
 
-      <Alert message="Not enough letters" isOpen={isNotEnoughLetters} />
-      <Alert message="Word not found" isOpen={isWordNotFoundAlertOpen} />
+      <Alert message="Net genôch letters" isOpen={isNotEnoughLetters} />
+      <Alert message="Dat wurd kin ik net" isOpen={isWordNotFoundAlertOpen} />
       <Alert
-        message={`You lost, the word was ${solution}`}
+        message={`Spitich, it wurd was ${solution}`}
         isOpen={isGameLost}
       />
       <Alert
-        message="Game copied to clipboard"
+        message="Útslach kopiearre"
         isOpen={shareComplete}
         variant="success"
       />
