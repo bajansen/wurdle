@@ -31,8 +31,12 @@ function App() {
     if (loaded?.solution !== solution) {
       return []
     }
-    if (loaded.guesses.includes(solution)) {
+    const gameWasWon = loaded.guesses.includes(solution)
+    if (gameWasWon) {
       setIsGameWon(true)
+    }
+    if (loaded.guesses.length === 6 && !gameWasWon) {
+      setIsGameLost(true)
     }
     return loaded.guesses
   })
@@ -50,7 +54,7 @@ function App() {
   }, [isGameWon])
 
   const onChar = (value: string) => {
-    if (currentGuess.length < 5 && guesses.length < 6) {
+    if (currentGuess.length < 5 && guesses.length < 6 && !isGameWon) {
       setCurrentGuess(`${currentGuess}${value}`)
     }
   }
@@ -60,7 +64,7 @@ function App() {
   }
 
   const onEnter = () => {
-    if (!(currentGuess.length === 5)) {
+    if (!(currentGuess.length === 5) && !isGameLost) {
       setIsNotEnoughLetters(true)
       return setTimeout(() => {
         setIsNotEnoughLetters(false)
@@ -88,26 +92,12 @@ function App() {
       if (guesses.length === 5) {
         setStats(addStatsForCompletedGame(stats, guesses.length + 1))
         setIsGameLost(true)
-        return setTimeout(() => {
-          setIsGameLost(false)
-        }, 2000)
       }
     }
   }
 
   return (
     <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <Alert message="Net genôch letters" isOpen={isNotEnoughLetters} />
-      <Alert message="Dat wurd kin ik net" isOpen={isWordNotFoundAlertOpen} />
-      <Alert
-        message={`Spitich, it wurd was ${solution}.`}
-        isOpen={isGameLost}
-      />
-      <Alert
-        message="Útslach kopiearre"
-        isOpen={shareComplete}
-        variant="success"
-      />
       <div className="flex w-80 mx-auto items-center mb-8">
         <h1 className="text-xl grow font-bold">Wurdle - Yn it Frysk!</h1>
         <InformationCircleIcon
@@ -154,11 +144,23 @@ function App() {
 
       <button
         type="button"
-        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
         onClick={() => setIsAboutModalOpen(true)}
       >
         Oer dit spultsje
       </button>
+
+      <Alert message="Not enough letters" isOpen={isNotEnoughLetters} />
+      <Alert message="Word not found" isOpen={isWordNotFoundAlertOpen} />
+      <Alert
+        message={`You lost, the word was ${solution}`}
+        isOpen={isGameLost}
+      />
+      <Alert
+        message="Game copied to clipboard"
+        isOpen={shareComplete}
+        variant="success"
+      />
     </div>
   )
 }
