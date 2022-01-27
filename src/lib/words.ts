@@ -18,12 +18,13 @@ export const getWordOfDay = () => {
   const now = Date.now()
   const msInDay = 86400000
   const index = Math.floor((now - epochMs) / msInDay)
-  //const index = 249;
+  const nextday = (index + 1) * msInDay + epochMs
 
   return {
-    solution: WURDEN[index].toUpperCase(),
+    solution: WURDEN[index % WURDEN.length].toUpperCase(),
     solutionIndex: index,
+    tomorrow: nextday,
   }
 }
 
-export const { solution, solutionIndex } = getWordOfDay()
+export const { solution, solutionIndex, tomorrow } = getWordOfDay()
