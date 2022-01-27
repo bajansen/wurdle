@@ -23,7 +23,10 @@ export const StatBar = ({ gameStats }: Props) => {
   return (
     <div className="flex justify-center my-2">
       <StatItem label="Tal pogingen" value={gameStats.totalGames} />
-      <StatItem label="Slaggings- persintaazje" value={`${gameStats.successRate}%`} />
+      <StatItem
+        label="Slaggings- persintaazje"
+        value={`${gameStats.successRate}%`}
+      />
       <StatItem label="Dizze rige" value={gameStats.currentStreak} />
       <StatItem label="Langste rige" value={gameStats.bestStreak} />
     </div>
