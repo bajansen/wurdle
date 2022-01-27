@@ -162,7 +162,7 @@ function App() {
 
       <Alert message="Net genôch letters" isOpen={isNotEnoughLetters} />
       <Alert message="Dat wurd kin ik net" isOpen={isWordNotFoundAlertOpen} />
-      <Alert message={`Spitich, it wurd was ${solution}`} isOpen={isGameLost} />
+      <Alert message={`Spitich, it wurd wie ${solution}`} isOpen={isGameLost} />
       <Alert
         message={successAlert}
         isOpen={successAlert !== ''}
