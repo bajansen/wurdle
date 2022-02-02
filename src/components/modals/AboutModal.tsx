@@ -19,7 +19,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         <br />
         De koade dy't brûkt is kinst{' '}
         <a
-          href="https://github.com/hannahcode/wordle"
+          href="https://github.com/hannahcode/GAME"
           className="underline font-bold"
         >
           hjir fine

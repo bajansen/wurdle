@@ -1,9 +1,10 @@
 import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
+import { GAME_TITLE } from '../constants/strings'
 
 export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(
-    `Wurdle ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n\n` +
+    `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n\n` +
       generateEmojiGrid(guesses) +
       '\nhttps://wurdle.benno.frl'
   )

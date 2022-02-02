@@ -8,8 +8,8 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
-      <p className="text-sm text-gray-500">
+    <BaseModal title="Hoe Wurdle te spyljen" isOpen={isOpen} handleClose={handleClose}>
+      <p className="text-sm text-gray-500 dark:text-gray-300">
         Besykje it WURDLE yn 6 kear te rieden. Nei eltse gok feroarjen de
         kleuren fan 'e tegels. Dit lit sjen hoe ticht dyn gok by it WURDLE siet.
       </p>
@@ -21,7 +21,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="C" />
         <Cell value="H" />
       </div>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-300">
         De letter S sit yn it wurd en stiet goed.
       </p>
       <div className="flex justify-center mb-1 mt-4">
@@ -31,7 +31,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="S" />
         <Cell value="E" />
       </div>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-300">
         De letter L sit yn it wurd mar stiet net goed.
       </p>
 
@@ -42,7 +42,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="I" status="absent" />
         <Cell value="J" />
       </div>
-      <p className="text-sm text-gray-500">De letter I sit net yn it wurd.</p>
+      <p className="text-sm text-gray-500 dark:text-gray-300">De letter I sit net yn it wurd.</p>
     </BaseModal>
   )
 }
