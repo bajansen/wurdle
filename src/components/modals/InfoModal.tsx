@@ -8,7 +8,11 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="Hoe Wurdle te spyljen" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal
+      title="Hoe Wurdle te spyljen"
+      isOpen={isOpen}
+      handleClose={handleClose}
+    >
       <p className="text-sm text-gray-500 dark:text-gray-300">
         Besykje it WURDLE yn 6 kear te rieden. Nei eltse gok feroarjen de
         kleuren fan 'e tegels. Dit lit sjen hoe ticht dyn gok by it WURDLE siet.
@@ -42,7 +46,9 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="I" status="absent" />
         <Cell value="J" />
       </div>
-      <p className="text-sm text-gray-500 dark:text-gray-300">De letter I sit net yn it wurd.</p>
+      <p className="text-sm text-gray-500 dark:text-gray-300">
+        De letter I sit net yn it wurd.
+      </p>
     </BaseModal>
   )
 }

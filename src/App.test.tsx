@@ -3,6 +3,8 @@ import { render, screen } from '@testing-library/react'
 import App from './App'
 import { GAME_TITLE } from './constants/strings'
 
+export const GAMETITLE = GAME_TITLE + ' - Yn it Frysk!'
+
 beforeEach(() => {
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
@@ -21,6 +23,6 @@ beforeEach(() => {
 
 test('renders App component', () => {
   render(<App />)
-  const linkElement = screen.getByText(GAME_TITLE)
+  const linkElement = screen.getByText(GAMETITLE)
   expect(linkElement).toBeInTheDocument()
 })
