@@ -28,6 +28,7 @@ import {
 
 import './App.css'
 
+const axios = require('axios')
 const ALERT_TIME_MS = 2000
 
 function App() {
@@ -67,6 +68,9 @@ function App() {
   })
 
   const [stats, setStats] = useState(() => loadStats())
+  const [geefWurd, setGeefWurd] = useState<Object>([])
+  const [definition, setDefinition] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     if (isDarkMode) {
@@ -81,12 +85,29 @@ function App() {
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
   }
 
+  const fetchDef = async () => {
+    setLoading(true)
+    axios
+      .get(
+        `https://frisian.eu/dictionary-services/fnwbservice/search?searchterm=${solution}`
+      )
+      .then((res: any) => {
+        setGeefWurd(res.data.results.result)
+        setDefinition(res.data.results.result.translations.lemma)
+      })
+      .catch((error: any) => {
+        console.log(error.message)
+      })
+    setLoading(false)
+  }
+
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, solution })
   }, [guesses])
 
   useEffect(() => {
     if (isGameWon) {
+      fetchDef()
       setSuccessAlert(
         WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
       )
@@ -185,6 +206,9 @@ function App() {
         gameStats={stats}
         isGameLost={isGameLost}
         isGameWon={isGameWon}
+        geefWurd={geefWurd}
+        definition={definition}
+        loading={loading}
         handleShare={() => {
           setSuccessAlert(GAME_COPIED_MESSAGE)
           return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)

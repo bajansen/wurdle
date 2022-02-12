@@ -11,6 +11,7 @@ import {
   NEW_WORD_TEXT,
   SHARE_TEXT,
 } from '../../constants/strings'
+import { Definition } from '../stats/Definition'
 
 type Props = {
   isOpen: boolean
@@ -20,6 +21,9 @@ type Props = {
   isGameLost: boolean
   isGameWon: boolean
   handleShare: () => void
+  geefWurd: Object
+  definition: string[]
+  loading: boolean
 }
 
 export const StatsModal = ({
@@ -30,6 +34,9 @@ export const StatsModal = ({
   isGameLost,
   isGameWon,
   handleShare,
+  geefWurd,
+  definition,
+  loading,
 }: Props) => {
   if (gameStats.totalGames <= 0) {
     return (
@@ -73,6 +80,7 @@ export const StatsModal = ({
           >
             {SHARE_TEXT}
           </button>
+          <Definition geefWurd={geefWurd} definition={definition} loading={loading}/>
         </div>
       )}
     </BaseModal>
