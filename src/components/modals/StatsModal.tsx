@@ -80,7 +80,11 @@ export const StatsModal = ({
           >
             {SHARE_TEXT}
           </button>
-          <Definition geefWurd={geefWurd} definition={definition} loading={loading}/>
+          <Definition
+            geefWurd={geefWurd}
+            definition={definition}
+            loading={loading}
+          />
         </div>
       )}
     </BaseModal>
