@@ -10,11 +10,11 @@ export const Definition = ({ geefWurd, definition, loading }: Props) => {
       {loading && <h5>Oersetting laden...</h5>}
       {!loading && (
         <>
-            <h5>
-              {Object.values(geefWurd)[0].toString().charAt(0).toUpperCase() +
-                Object.values(geefWurd)[0].toString().substring(1) +
-                ':'}
-            </h5>
+          <h5>
+            {Object.values(geefWurd)[0].toString().charAt(0).toUpperCase() +
+              Object.values(geefWurd)[0].toString().substring(1) +
+              ':'}
+          </h5>
           <span className="font-large text-gray-900 dark:text-gray-100">
             {typeof Object.values(definition)[1] === 'string' &&
               Object.values(definition)[1]}
