@@ -7,7 +7,7 @@ type Props = {
 export const Definition = ({ geefWurd, definition, loading }: Props) => {
   return (
     <div>
-      {loading && <div>Laden</div>}
+      {loading && <div>Oersetting laden</div>}
       {!loading && (
         <>
           <div>

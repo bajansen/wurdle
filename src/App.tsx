@@ -94,11 +94,11 @@ function App() {
       .then((res: any) => {
         setGeefWurd(res.data.results.result)
         setDefinition(res.data.results.result.translations.lemma)
+        setLoading(false)
       })
       .catch((error: any) => {
         console.log(error.message)
       })
-    setLoading(false)
   }
 
   useEffect(() => {
