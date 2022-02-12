@@ -31,6 +31,14 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         >
           hjir spylje
         </a>
+        <br />
+        Wurdlist en oersettingen mei mooglik makke troch{' '}
+        <a
+          href="https://frisian.eu/dictionary-services/fhwbservice/index.html"
+          className="underline font-bold"
+        >
+          Frisian.eu
+        </a>{' '}
       </p>
     </BaseModal>
   )
