@@ -14,8 +14,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       handleClose={handleClose}
     >
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Besykje it WURDLE yn 6 kear te rieden. Nei eltse gok feroarjen de
-        kleuren fan 'e tegels. Dit lit sjen hoe ticht dyn gok by it WURDLE siet.
+        Besykje it WURDLE yn 6 kear te rieden. Nei eltse gok wizigje de kleuren
+        fan 'e tegels. Dit lit sjen hoe ticht dyn gok by it WURDLE sit.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">

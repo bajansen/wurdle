@@ -9,7 +9,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="Oer Wurdle" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500">
-        Dit is een Fryske verzje fan Wordle. Oersette en fersoarge troch{' '}
+        Dit is een Fryske ferzje fan Wordle. Oersetting fersoarge troch{' '}
         <a
           href="https://www.twitter.com/BAJansen"
           className="underline font-bold"
@@ -17,9 +17,9 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           Bernardus Jansen
         </a>{' '}
         <br />
-        De koade dy't brûkt is kinst{' '}
+        De koade dy´t brûkt is kinst{' '}
         <a
-          href="https://github.com/hannahcode/GAME"
+          href="https://github.com/cwackerfuss/react-wordle"
           className="underline font-bold"
         >
           hjir fine
