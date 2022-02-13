@@ -92,8 +92,13 @@ function App() {
         `https://frisian.eu/dictionary-services/fnwbservice/search?searchterm=${solution}`
       )
       .then((res: any) => {
-        setGeefWurd(res.data.results.result)
-        setDefinition(res.data.results.result.translations.lemma)
+        if (typeof res.data.results.result[0] === 'object') {
+          setGeefWurd(res.data.results.result[0])
+          setDefinition(res.data.results.result[0].translations.lemma)
+        } else {
+          setGeefWurd(res.data.results.result)
+          setDefinition(res.data.results.result.translations.lemma)
+        }
         setLoading(false)
       })
       .catch((error: any) => {
