@@ -159,7 +159,7 @@ export const WURDEN = [
   'lokke',
   'wjukt',
   'ombou',
-  'reüny',
+  'reuny',
   'wizer',
   'skonk',
   'fylje',
