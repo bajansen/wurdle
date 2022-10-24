@@ -1,6 +1,6 @@
 export const GAME_TITLE = 'Wurdle'
 
-export const WIN_MESSAGES = ['Geweldich!', 'Best genôch', 'Goed hear']
+export const WIN_MESSAGES = ['Geweldich!', 'Best genôch', 'Goed hear', 'Hatsiekidee', 'Koe minder', 'Bjusterbaarlik', 'Krekt', 'Moai']
 export const GAME_COPIED_MESSAGE = 'Utslach kopiearre'
 export const ABOUT_GAME_MESSAGE = 'Oer dit spultsje'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Net genôch letters'
